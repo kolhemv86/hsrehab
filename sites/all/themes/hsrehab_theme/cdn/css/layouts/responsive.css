@@ -1,0 +1,232 @@
+@media screen and (max-width: 1199px) {
+  #block-contact-form-blocks-0 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+  .dashboard-card {
+    position: relative;
+  }
+  .dashboard-card .views-field-nid {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+}
+@media screen and (min-width: 900px) {
+/** General configurations **/
+  .not-front.no-sidebars .main-container .row {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .not-front.one-sidebar .main-container .row {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .container-front {
+    max-width: 900px;
+  }
+  .page-admin-manage-patients.not-front.no-sidebars .main-container .row,
+  .page-node-344.not-front.no-sidebars .main-container .row,
+  .page-node-248.not-front.no-sidebars .main-container .row {
+    max-width: 1200px;
+  }
+  #edit-account,
+  #edit-account--2,
+  #edit-account--3 {
+    position: relative;
+  }
+  .page-admin-people-create.role-hsrehab-admin .form-item-notify {
+    position: absolute;
+    top: 200px;
+    right: 0;
+  }
+  .not-front .container-fluid.banner {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .view-patient-appointments .col-sm-8 {
+    margin-top: 25px;
+  }
+  .page-contact .region-content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .jcarousel-skin-default .jcarousel-container-horizontal {
+    max-width: 600px;
+    height: auto;
+    padding: 0;
+  }
+  .jcarousel-skin-default .jcarousel-clip-horizontal  {
+    width: 600px;
+  }
+  .page-node-add-och-initial-assessment-report .field-name-field-och-inirep-approx-date,
+  .page-node-edit.node-type-och-initial-assessment-report .field-name-field-och-inirep-approx-date {
+    position: absolute;
+    top: 380px;
+    right: 10%;
+  }
+  .jumbotron h1, .jumbotron .h1 {
+    font-size: 50px;
+  }
+  .jumbotron p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  /** Footer **/
+  footer .row {
+    max-width: 1200px;
+    margin: auto;
+  }
+  /** Menus **/
+  .navbar .logo img {
+    height: 81px;
+    width: auto;
+  }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    float: right;
+    margin-right: 0;
+  }
+  #block-system-main-menu {
+    margin-top: 15px;
+  }
+  #block-system-main-menu > ul > li.last,
+  #block-system-main-menu > ul > li.last:hover {
+    background-color: #f4a535;
+    border-radius: 15px;
+  }
+  #block-system-main-menu > ul > li.last a,
+  #block-system-main-menu > ul > li.last a:hover {
+    background: transparent;
+    color: #fff;
+  }
+  #block-system-main-menu,
+  #block-menu-menu-administration-menu,
+  #block-menu-menu-user-client-menu,
+  #block-menu-menu-user-company-menu,
+  #block-menu-menu-company-menu,
+  #block-bootstrap-login-modal-bootstrap-login-modal,
+  #block-menu-menu-netcomp-staff-menu {
+    margin-right: 0;
+  }
+  #block-system-main-menu li,
+  #block-menu-menu-administration-menu li,
+  #block-menu-menu-user-client-menu li,
+  #block-menu-menu-user-company-menu li,
+  #block-menu-menu-company-menu li,
+  #block-bootstrap-login-modal-bootstrap-login-modal li,
+  #block-menu-menu-netcomp-staff-menu li {
+    display: inline-block;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 899px) {
+  /** Menus **/
+  .navbar .logo img {
+    height: 40px;
+    width: auto;
+    margin-top: 15px;
+  }
+  .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible !important;
+    background: #fff;
+  }
+  #block-system-main-menu,
+  #block-menu-menu-administration-menu,
+  #block-menu-menu-user-client-menu,
+  #block-menu-menu-user-company-menu,
+  #block-menu-menu-company-menu,
+  #block-bootstrap-login-modal-bootstrap-login-modal,
+  #block-menu-menu-netcomp-staff-menu,
+  #block-system-user-menu {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #block-system-main-menu li,
+  #block-menu-menu-administration-menu li,
+  #block-menu-menu-user-client-menu li,
+  #block-menu-menu-user-company-menu li,
+  #block-menu-menu-company-menu li,
+  #block-bootstrap-login-modal-bootstrap-login-modal li,
+  #block-menu-menu-netcomp-staff-menu li {
+    display: block;
+  }
+  li.dropdown .caret {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #f4a535;
+  }
+  .dropdown-menu {
+    width: 50%;
+    margin-left: 50%;
+    top: 0;
+  }
+  #block-bootstrap-login-modal-bootstrap-login-modal {
+    position: fixed;
+    top: 10px;
+    right: 15%;
+  }
+  .aa{
+	margin-top:0;
+}
+}
+@media screen and (min-width: 601px) {
+  li.dropdown-submenu:hover ul.dropdown-menu,
+  li.dropdown-submenu:hover ul.dropdown-menu li a {
+    display: block;
+  }
+  li.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+  
+  .aa{
+	margin-top:0;
+}
+}
+@media screen and (max-width: 600px) {
+  .navbar-collapse .nav {
+    transform: translateY(-500px);
+  }
+  .navbar-collapse.in .nav {
+    transform: translateY(0px);
+    text-align: center;
+  }
+  .expanded .caret {
+    display: none;
+  }
+  li.dropdown-submenu:hover ul.dropdown-menu,
+  li.dropdown-submenu:hover ul.dropdown-menu li a {
+    display: none;
+  }
+  p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  footer ul,
+  footer p {
+    text-align: center;
+  }
+  .aa{
+	margin-top:0;
+}
+}
+
+@media screen and (min-width: 768px) {
+/*-=-=-=-=-=-=-= feb 5 -=-=-=-=-=-=-*/
+.aa{
+	margin-top:0;
+}
+}

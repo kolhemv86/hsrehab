@@ -1,0 +1,3 @@
+name = Better Proximity Filter
+description = Provide a better and customized proximity filter for list of host views
+core = 7.x

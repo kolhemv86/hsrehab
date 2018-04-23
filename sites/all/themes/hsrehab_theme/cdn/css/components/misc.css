@@ -1,0 +1,1744 @@
+
+/**
+ * Place your custom styles here.
+ */
+
+/** General configurations **/
+.field-label-inline .field-label,
+.field-label-inline .field-items {
+  float: none;
+  display: inline-block;
+}
+.field-name-body {
+  text-align: justify;
+}
+.image {
+  max-height: 250px;
+  max-width: 100%;
+  margin: 15px;
+}
+img.banner {
+  width: 100%;
+  height: auto;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.round-box {
+  margin-top: 15px;
+  margin-bottom: 15px
+}
+.form-actions {
+  text-align: center;
+}
+ul.list-styled li {
+  list-style-image: url(../../images/icons/puce.svg);
+}
+.container-orange {
+  background: #f4a535;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.container-orange h2 {
+  color: #fff;
+}
+.form-autocomplete .input-group-addon {
+  border: 0;
+  border-bottom: 1px solid #f4a535;
+}
+.page-node-add .breadcrumb {
+  /*display: none;*/
+}
+.page-node-add-ml-initial-assessment-report .breadcrumb,
+.page-node-add-och-initial-assessment-report .breadcrumb,
+.page-node-add-ml-discharge-report .breadcrumb,
+.page-node-add-och-discharge-report .breadcrumb {
+  display: block;
+}
+.page-node-340 .breadcrumb {
+  display: block;
+}
+.alert-block {
+  font-size: 1.5em;
+}
+.alert-block ul {
+  list-style: none;
+}
+.page-admin-people-create .alert-block.alert-success li:nth-child(2)  {
+  display: block;
+}
+.alert-block.alert-success li:nth-child(2) {
+  display: none;
+}
+.field-type-text-long .field-items {
+  text-align: justify;
+}
+.field .field-label:after {
+  content:"";
+  display: block;
+  width: 100px;
+  height: 1px;
+  border-bottom: 1px solid #f4a535;
+  margin: 10px auto 0px;
+}
+.node-type-patient-sheet #edit-field-patient-area-of-injury-und label:hover,
+.page-node-add-patient-sheet #edit-field-patient-area-of-injury-und label:hover,
+.form-item-field-triage-form-injury-area-und label:hover {
+  text-decoration: underline;
+}
+#modalLoginLabel {
+  text-align: right;
+  margin-right: 30px;
+  border-bottom: 0;
+}
+#modalLoginLabel:before {
+  content: "";
+  float: left;
+  display: inline-block;
+  width: 80%;
+  height: 50px;
+  background: url(../../logo.png) left no-repeat;
+  background-size: 200px auto;
+}
+/** Devel **/
+.krumo-root {
+  font-size: 11px;
+}
+/** Panels **/
+.panel-group {
+  margin-top: 50px;
+}
+.panel-heading {
+  text-align: left;
+}
+.panel-primary {
+  border-color: #f4a535;
+}
+.panel-primary > .panel-heading {
+  background-color: #f4a535;
+  border-color: #f4a535;
+}
+/** Buttons **/
+.btn-default {
+  background-color: #777781;
+  border-color: #777781;
+}
+.btn-default:hover {
+  background-color: #888893;
+  border-color: #888893;
+}
+.btn-primary {
+  background-color: #006E90;
+  border-color: #006E90;
+}
+.btn-primary:hover {
+  background-color: #007BA0;
+  border-color: #007BA0;
+}
+.btn-secondary {
+  background-color: #F4A535;
+  border-color: #F4A535;
+}
+.btn-secondary:hover {
+  background-color: #cb841f;
+  border-color: #cb841f;
+}
+.btn-success {
+  background-color: #9ACF60;
+  border-color: #9ACF60;
+}
+.btn-success:hover {
+  background-color: #A3DD66;
+  border-color: #A3DD66;
+}
+.btn-warning,
+.btn-info,
+.btn-danger {
+  background-color: #E0607E;
+  border-color: #E0607E;
+}
+.btn-warning:hover,
+.btn-info:hover,
+.btn-danger {
+  background-color: #ED6585;
+  border-color: #ED6585;
+}
+.quotation {
+  margin-top: 100px;
+  background-color: #fcb54d;
+  border-radius: 15px;
+  padding: 15px;
+}
+.quotation img {
+  max-width: 100%;
+}
+/** Header **/
+header.navbar {
+  background: #fff;
+  border: 0;
+  -moz-box-shadow: 1px 1px 5px #eee;
+  -webkit-box-shadow: 1px 1px 5px #eee;
+  -ms-box-shadow: 1px 1px 5px #eee;
+  box-shadow: 1px 1px 5px #eee;
+  position: fixed;
+  z-index: 1500;
+  width: 100%;
+  height: 80px;
+  top: 0;
+}
+.navbar.container,
+.navbar.container-fluid {
+  margin-top: 0;
+  border-radius: 0;
+}
+.navbar-toggle {
+  background-color: #E5E5E5;
+  margin-top: 20px;
+}
+/** Front pages **/
+.front .alert.messages {
+  position: absolute;
+  top: 200px;
+  z-index: 999;
+  right: 15px;
+}
+.modal-dialog .alert.messages {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.front .tooltip,
+.page-contact .tooltip,
+.page-node-23 .tooltip,
+.page-node-70 .tooltip,
+.page-node-66 .tooltip,
+.page-node-67 .tooltip,
+.page-node-68 .tooltip,
+.page-node-69 .tooltip,
+.page-node-85 .tooltip,
+.page-node-86 .tooltip,
+.page-node-87 .tooltip,
+.page-node-88 .tooltip,
+.page-node-89 .tooltip,
+.page-node-90 .tooltip,
+.page-node-91 .tooltip,
+.page-node-92 .tooltip,
+.page-node-250 .tooltip,
+.page-node-256 .tooltip {
+  z-index: 10000;
+}
+.front .well,
+.page-contact .well,
+.page-node-23 .well,
+.page-node-70 .well,
+.page-node-66 .well,
+.page-node-67 .well,
+.page-node-68 .well,
+.page-node-69 .well,
+.page-node-85 .well,
+.page-node-86 .well,
+.page-node-87 .well,
+.page-node-88 .well,
+.page-node-89 .well,
+.page-node-90 .well,
+.page-node-91 .well,
+.page-node-92 .well,
+.page-node-250 .well,
+.page-node-256 .well {
+  background-color: #FAFAFA;
+}
+.front .breadcrumb,
+.page-contact .breadcrumb,
+.page-node-23 .breadcrumb,
+.page-node-70 .breadcrumb,
+.page-node-66 .breadcrumb,
+.page-node-67 .breadcrumb,
+.page-node-68 .breadcrumb,
+.page-node-69 .breadcrumb,
+.page-node-85 .breadcrumb,
+.page-node-86 .breadcrumb,
+.page-node-87 .breadcrumb,
+.page-node-88 .breadcrumb,
+.page-node-89 .breadcrumb,
+.page-node-90 .breadcrumb,
+.page-node-91 .breadcrumb,
+.page-node-92 .breadcrumb,
+.page-node-250 .breadcrumb,
+.page-node-256 .breadcrumb {
+  display: none;
+}
+
+.front .front-card {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  background: #f4a535;
+  margin: 30px 15px;
+  padding: 15px;
+  color: #fff;
+  min-height: 250px;
+}
+.front .main-container .container-fluid {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.not-front .banner.container-fluid {
+  margin-top: 80px;
+}
+.not-front .main-container.front-pages {
+  margin-top: 0;
+}
+.not-front .main-container.front-pages #section-content {
+  margin-top: 50px;
+}
+.not-front.page-contact .main-container.front-pages #section-content {
+  margin-top: 50px;
+}
+.not-front .main-container.front-pages .well {
+  border: 0;
+  padding: 100px 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.not-front #section-content ul {
+  overflow: hidden; /** Correct display with floated images **/
+  padding-left: 20px;
+}
+.page-contact.not-front .main-container.front-pages .well {
+  padding: 100px 0 15px;
+}
+.page-contact .leaflet-control-container {
+  display: none;
+}
+/** Footer **/
+footer {
+  background-color: #FAFAFA;
+}
+footer ul {
+  margin-left: 0;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+footer li {
+    list-style: none;
+}
+footer li.social-sharing {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  height: 32px;
+}
+footer li.social-sharing a {
+  display: block;
+  position: absolute;
+  width: auto;
+  height: 32px;
+  top: 0;
+  left: 0;
+}
+footer li.social-sharing a:hover {
+  top: -37px;
+}
+#block-system-main footer {
+  display: none;
+}
+/** Highlight **/
+.panel-title {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+/** Content **/
+.front .main-container {
+  margin-top: 80px;
+}
+.not-front .main-container {
+  margin-top: 100px;
+}
+.page-header {
+  margin: 40px 0 50px;
+  padding-left: 5%;
+}
+#ui-datepicker-div {
+  margin-top: -100px; /** Correct main container margin-top **/
+}
+.date-combo .panel-body {
+  text-align: center;
+}
+/** Footer **/
+.front .footer {
+  margin-top: 0;
+}
+ /** Front page **/
+.front .page-header {
+  display: none;
+}
+.front .btn {
+  margin-top: 0;
+}
+.front .navbar.container,
+.front .navbar.container-fluid {
+  margin: 0;
+}
+.front .container .jumbotron,
+.front .container-fluid .jumbotron {
+   padding: 0;
+   background: transparent;
+ }
+.front .col-sm-12 {
+   padding: 0;
+ }
+.front .jumbotron h1 {
+   font-size: 36px;
+ }
+
+/** Dashboard **/
+.dashboard-card {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.view-display-id-block_2.view-staff-calendar /*dashboard-card */ {
+  max-width: 100%;
+}
+/**
+  * User pages
+**/
+.page-user-edit .breadcrumb,
+.role-staff.page-user .breadcrumb,
+.role-auditor.page-user .breadcrumb {
+  display: none;
+}
+.page-user .field-label:after {
+  display: none;
+}
+.group-account-information h2 {
+  margin-bottom: 50px;
+}
+.field-name-realname .field-label {
+  display: none;
+}
+.page-user .field-name-field-user-position {
+  margin-top: 15px;
+}
+.page-admin-people-create.role-hsrehab-admin .form-item-status {
+  display: none;
+}
+.page-admin-manage-users .checkbox input[type="checkbox"] {
+  margin-left: 0;
+}
+.user-picture {
+  max-width: 64px;
+  height: auto;
+  margin: auto;
+}
+.field-name-realname label {
+  display: none;
+}
+.page-user.logged-in .group-registration-type {
+  display: none;
+}
+.page-user.not-logged-in .main-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-user .region-content {
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 2em;
+}
+.page-user.not-logged-in .form-actions {
+  text-align: center;
+}
+.page-users-my-invoices .breadcrumb {
+  display: none;
+}
+/** Registration page **/
+
+#ajax-user-register-form-wrapper .group-registration-type {
+  text-align: center;
+}
+#ajax-user-register-form-wrapper .form-type-radio {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  vertical-align: top;
+  margin: 1em;
+}
+#ajax-user-register-form-wrapper .form-type-radio input[type=radio] {
+  position: absolute;
+  left: 112px;
+  top: 20px;
+}
+#ajax-user-register-form-wrapper .form-type-radio label {
+  height: 200px;
+  width: 100%;
+  padding-left: 0;
+}
+#ajax-user-register-form-wrapper .field-name-field-user-reg-type .form-type-radio:nth-child(1) label {
+  background: url(../../images/icons/auditor.svg) center center no-repeat;
+}
+#ajax-user-register-form-wrapper .field-name-field-user-reg-type .form-type-radio:nth-child(2) label {
+  background: url(../../images/icons/doctor.svg) center center no-repeat;
+}
+#ajax-user-register-form-wrapper .field-name-field-user-reg-type .form-type-radio:nth-child(3) label {
+  background: url(../../images/icons/medicine.svg) center center no-repeat;
+}
+#ajax-user-register-form-wrapper .field-name-field-hs-rehab-service-types .form-type-radio:nth-child(2) label {
+  background: url(../../images/icons/organization.svg) center center no-repeat;
+}
+#ajax-user-register-form-wrapper .field-name-field-hs-rehab-service-types .form-type-radio:nth-child(1) label {
+  background: url(../../images/icons/personal_use.svg) center center no-repeat;
+}
+.field-name-field-user-company-type {
+  text-align: center;
+}
+.field-name-field-user-company-type .form-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+/** Blocks **/
+.not-front .block {
+  margin-bottom: 50px;
+}
+.block h2 {
+  text-align: center;
+}
+.navbar #block-search-form {
+  margin: 15px 0;
+}
+.dropdown-menu li {
+  width: 100%;
+  position: relative;
+}
+li.dropdown-submenu ul.dropdown-menu,
+li.dropdown-submenu ul.dropdown-menu li a {
+  display: none;
+}
+#block-system-user-menu .user-picture {
+  display: inline-block;
+  max-width: 30px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+#block-system-user-menu .user-picture img {
+  height: 30px;
+}
+#block-system-user-menu .dropdown-toggle {
+  display: none;
+}
+#block-system-user-menu .menu {
+  padding: 10px 15px;
+}
+#block-system-user-menu li {
+  color: #f4a535;
+  cursor: pointer;
+}
+#block-search-form .btn {
+  margin-top: 0;
+}
+#block-views-user-profile-block .user-picture {
+  max-width: 40px;
+}
+#block-views-user-profile-block .user-picture img {
+  border-radius: 100%;
+}
+#block-views-user-profile-block .views-field-picture,
+#block-views-user-profile-block .views-field-realname {
+  display: inline-block;
+  vertical-align: middle;
+}
+#block-bootstrap-login-modal-bootstrap-login-modal a {
+  color: #fff;
+}
+#block-system-main-menu li.dropdown li {
+  display: block;
+  margin-right: 0;
+}
+#block-block-5 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+#block-views-front-banner-client {
+  background: #f4a535;
+  padding: 30px 0;
+}
+#block-views-front-banner-client h2 {
+  color: #fff;
+}
+#block-menu-menu-our-services h2,
+#block-menu-menu-our-clients h2,
+#block-menu-menu-about-us h2,
+#block-block-12 h2 {
+border-bottom: 1px solid #f4a535;
+padding-bottom: 15px;
+margin: 0px 30px 15px;
+}
+#block-menu-menu-our-services li a,
+#block-menu-menu-our-clients li a,
+#block-menu-menu-about-us li a {
+  padding-left: 55px;
+}
+#block-menu-menu-our-services li:before,
+#block-menu-menu-our-clients li:before,
+#block-menu-menu-about-us li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  margin-left: 15px;
+  background: url(../../images/icons/arrow-list.svg) left center no-repeat;
+  background-size: 10px auto;
+  z-index: 2;
+  }
+.view-display-id-client {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+header .block {
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 15px;
+  vertical-align: top;
+}
+/** Contact Us Block **/
+.block-contact-form-blocks {
+  position: relative;
+}
+.front-contact-form {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+.front #contact-site-form {
+  position: relative;
+  top: 0;
+  max-width: 900px;
+  min-height: 380px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+#block-contact-form-blocks-0 h2 {
+  color: #fff;
+}
+#block-contact-form-blocks-0 .user-info-from-cookie.contact-form .form-item {
+  max-width: 400px;
+}
+#block-contact-form-blocks-0 .form-item input,
+#block-contact-form-blocks-0 .form-item textarea {
+  background-color: rgba(255,255,255,0.7);
+  border: 0;
+  border-radius: 2px;
+}
+#block-contact-form-blocks-0 .form-item-message .grippie {
+  display: none;
+}
+#block-contact-form-blocks-0 .form-item-message {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#block-contact-form-blocks-0 .captcha {
+  position: absolute;
+  right: 0;
+  top: 200px;
+}
+#block-contact-form-blocks-0 .captcha .rc-anchor-light {
+  border: 0;
+  border-radius: 2px;
+  background-color: rgba(255,255,255,0.7);
+}
+/** User login block **/
+
+#block-user-login {
+  padding: 2em;
+  background: #f5f5f5;
+  position: relative;
+}
+#user-login-block-container {
+  max-width: 1200px;
+  margin: auto;
+}
+#user-login-block-teaser {
+  width: 65%;
+  display: inline-block;
+  vertical-align: top;
+}
+#user-login-block-form-fields {
+  width: 33%;
+  display: inline-block;
+  vertical-align: top;
+}
+#user-login-block-form-fields > ul {
+  display: none;
+}
+#user-login-block-form-fields #edit-submit {
+  background: transparent;
+  background-image: none;
+  border: 0;
+  color: #999;
+  text-shadow: none;
+}
+/***
+  ** Content types
+***/
+/** Appointment **/
+.role-staff.page-node-edit .group-appointment-request {
+  display: none;
+}
+.node-type-appointment-request .field-label:after {
+  display: none;
+}
+.node-type-appointment-request .node-appointment-request {
+  text-align: center;
+}
+.node-type-appointment-request .group-patient-informations {
+  border-right: 1px solid #f4a535;
+  margin-bottom: 15px;
+}
+.node-type-appointment-request .field-name-field-appointment-status {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+}
+.node-type-appointment-request .field-name-field-appointment-status label {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+.node-type-appointment-request .field-name-field-appointment-status input:checked + .input-image:after {
+  pointer-events: none;
+  position: absolute;
+  content:"Opened";
+  display: block;
+  background: #3fb618;
+  border-radius: 8px;
+  padding: 5px 10px;
+  right: 0;
+}
+.node-type-appointment-request .field-name-field-appointment-status .Opened {
+  background: #3fb618;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: bold;
+}
+.node-type-appointment-request .field-name-field-appointment-status input + .input-image:after {
+  pointer-events: none;
+  position: absolute;
+  content:"Closed";
+  display: block;
+  background: #ff0039;
+  border-radius: 8px;
+  padding: 5px 10px;
+  right: 0;
+}
+.node-type-appointment-request .field-name-field-appointment-status .Closed {
+  background: #ff0039;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: bold;
+}
+.node-type-appointment-request .field-name-field-appointment-status input {
+  display: none !important;
+}
+.node-type-appointment-request .node-patient-sheet.node-teaser h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+  display: block;
+  border-bottom: 0;
+  text-transform: none;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+.node-type-appointment-request .row {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.node-type-appointment-request .field-name-field-appointment-package-serv {
+  margin-top: 25px;
+}
+.node-type-appointment-request .node-patient-sheet.node-teaser footer {
+  display: none;
+}
+.node-type-appointment-request .group-triage-informations,
+.node-type-appointment-request .group-booking-informations {
+  padding: 0;
+}
+.node-type-appointment-request .view-id-appointment_calendar input.date-date {
+  width: 150px;
+}
+.page-node-add-appointment-request.role-user .group-appointment-informations,
+.page-node-add-appointment-request.role-company .group-appointment-informations{
+  display: none;
+}
+.page-node-edit.node-type-appointment-request #edit-field-appointment-package-serv-und,
+.page-node-add-appointment-request #edit-field-appointment-package-serv-und {
+  text-align: center;
+}
+.page-node-edit.node-type-appointment-request .form-type-radio,
+.page-node-add-appointment-request .form-type-radio {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  position: relative;
+  vertical-align: top;
+  margin: 1em;
+}
+body.page-node-edit.node-type-appointment-request .form-type-radio input[type=radio],
+body.page-node-add-appointment-request .form-type-radio input[type=radio] {
+  display: none;
+}
+.page-node-edit.node-type-appointment-request .form-type-radio label,
+.page-node-add-appointment-request .form-type-radio label {
+  height: 250px;
+  width: 100%;
+  padding-left: 0;
+  padding-top: 30px;
+}
+.page-node-edit.node-type-appointment-request .form-type-radio .input-image,
+.page-node-add-appointment-request .form-type-radio .input-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page-node-edit.node-type-appointment-request .form-item-field-appointment-package-serv-und .form-type-radio:nth-child(1) .input-image,
+.page-node-add-appointment-request .form-item-field-appointment-package-serv-und .form-type-radio:nth-child(1) .input-image {
+  background: url(../../images/icons/clinic.svg) center bottom 30px no-repeat;
+}
+.page-node-edit.node-type-appointment-request .form-item-field-appointment-package-serv-und .form-type-radio:nth-child(2) .input-image,
+.page-node-add-appointment-request .form-item-field-appointment-package-serv-und .form-type-radio:nth-child(2) .input-image {
+  background: url(../../images/icons/triage-clinic-fasttrack.svg) center bottom 30px no-repeat;
+}
+.page-node-edit.node-type-appointment-request .form-item-field-appointment-package-serv-und .form-type-radio:nth-child(3) .input-image,
+.page-node-add-appointment-request .form-item-field-appointment-package-serv-und .form-type-radio:nth-child(3) .input-image {
+  background: url(../../images/icons/triage-clinic.svg) center bottom 30px no-repeat;
+}
+.page-node-edit.node-type-appointment-request .form-item-field-appointment-package-serv-und .form-type-radio:nth-child(4) .input-image,
+.page-node-add-appointment-request .form-item-field-appointment-package-serv-und .form-type-radio:nth-child(4) .input-image {
+  background: url(../../images/icons/triage.svg) center bottom 30px no-repeat;
+}
+.page-node-edit.node-type-appointment-request .form-item-field-appointment-price-und-0-value label,
+.page-node-add-appointment-request .form-item-field-appointment-price-und-0-value label {
+  display: block;
+}
+.page-node-edit.node-type-appointment-request .form-item-field-appointment-package-serv-und .input-image,
+.page-node-add-appointment-request .form-item-field-appointment-package-serv-und .input-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.page-node-edit.node-type-appointment-request .form-item-field-appointment-package-serv-und input:checked + .input-image,
+.page-node-add-appointment-request .form-item-field-appointment-package-serv-und input:checked + .input-image {
+border: 5px solid #f4a535;
+border-radius: 15px;
+}
+.group-physiotherapy-informations {
+  text-align: center;
+}
+.group-physiotherapy-informations #edit-field-appointment-clinic,
+.group-physiotherapy-informations #edit-field-appointment-staff {
+  text-align: left;
+}
+.page-node-edit.node-type-appointment-request #edit-field-appointment-ini-rate,
+.page-node-add-appointment-request #edit-field-appointment-ini-rate,
+.page-node-edit.node-type-appointment-request #edit-field-appointment-session-rate,
+.page-node-add-appointment-request #edit-field-appointment-session-rate {
+  display: inline-block;
+  margin-right: 15px;
+}
+.page-node-edit.node-type-appointment-request #edit-field-appointment-ini-rate input,
+.page-node-add-appointment-request  #edit-field-appointment-ini-rate input,
+.page-node-edit.node-type-appointment-request #edit-field-appointment-session-rate input,
+.page-node-add-appointment-request #edit-field-appointment-session-rate input {
+  max-width: 70px;
+  display: inline-block;
+}
+.page-node-edit.node-type-appointment-request .field-name-field-appointment-close {
+  max-width: 180px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/** Session Pages **/
+.page-node-edit .form-item-title {
+  display: none;
+}
+.page-node-edit.node-type-session .form-item-field-session-price-1-und-0-value label,
+.page-node-add-session .form-item-field-session-price-1-und-0-value label {
+  display: block;
+}
+.page-node-edit.node-type-session #edit-field-session-ini-rate-und-0-value,
+.page-node-add-session #edit-field-session-ini-rate-und-0-value,
+.page-node-edit.node-type-session #edit-field-session-rate-und-0-value,
+.page-node-add-session #edit-field-session-rate-und-0-value {
+  max-width: 70px;
+  display: inline-block;
+  margin-left: 15px;
+}
+.node-session {
+  text-align: center;
+}
+.node-session .field-label:after {
+  display: none;
+}
+.node-type-session .field-name-field-appointment-status {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+}
+.node-type-session .field-name-field-appointment-status label {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+.node-type-session .field-name-field-appointment-status input:checked + .input-image:after {
+  pointer-events: none;
+  position: absolute;
+  content:"Opened";
+  display: block;
+  background: #3fb618;
+  border-radius: 8px;
+  padding: 5px 10px;
+  right: 0;
+}
+.node-type-session .field-name-field-appointment-status .Opened {
+  background: #3fb618;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: bold;
+}
+.node-type-session.field-name-field-appointment-status input + .input-image:after {
+  pointer-events: none;
+  position: absolute;
+  content:"Closed";
+  display: block;
+  background: #ff0039;
+  border-radius: 8px;
+  padding: 5px 10px;
+  right: 0;
+}
+.node-type-session .field-name-field-appointment-status .Closed {
+  background: #ff0039;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: bold;
+}
+.node-type-session .field-name-field-appointment-status input {
+  display: none !important;
+}
+.node-type-session .node-patient-sheet.node-teaser h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+  display: block;
+  border-bottom: 0;
+  text-transform: none;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+.field-name-field-session-app-status-1,
+.field-name-field-session-app-status-2,
+.field-name-field-session-app-status-3,
+.field-name-field-session-app-status-4,
+.field-name-field-session-app-status-5,
+.field-name-field-session-app-status-6,
+.field-name-field-session-app-status-7,
+.field-name-field-session-app-status-8 {
+  /*position: absolute;*/
+  top: 8px;
+  right: 15px;
+  background-color: transparent;
+  color: #000;
+  border: 0;
+}
+.page-node-edit .field-name-field-session-app-status-1,
+.page-node-add .field-name-field-session-app-status-1,
+.page-node-edit .field-name-field-session-app-status-2,
+.page-node-add .field-name-field-session-app-status-2,
+.page-node-edit .field-name-field-session-app-status-3,
+.page-node-add .field-name-field-session-app-status-3,
+.page-node-edit .field-name-field-session-app-status-4,
+.page-node-add .field-name-field-session-app-status-4,
+.page-node-edit .field-name-field-session-app-status-5,
+.page-node-add .field-name-field-session-app-status-5,
+.page-node-edit .field-name-field-session-app-status-6,
+.page-node-add .field-name-field-session-app-status-6,
+.page-node-edit .field-name-field-session-app-status-7,
+.page-node-add .field-name-field-session-app-status-7,
+.page-node-edit .field-name-field-session-app-status-8,
+.page-node-add .field-name-field-session-app-status-8 {
+  position: static;
+  color: inherit;
+}
+/** Patient Sheet **/
+.node-type-patient-sheet .group-patient-informations .panel-body,
+.node-type-patient-sheet .group-medical-informations .panel-body {
+  text-align: left;
+}
+.node-type-patient-sheet .field-name-field-patient-dob .field-label:before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  /*margin: auto; */
+  background: url(../../images/icons/birthday-cake.svg) center center no-repeat;
+}
+.node-type-patient-sheet .field-name-field-patient-address .field-label:before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  /*margin: auto;*/
+  background: url(../../images/icons/home-address.svg) center center no-repeat;
+}
+.node-type-patient-sheet .field-name-field-patient-position .field-label:before {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 36px;
+  margin: auto;
+  background: url(../../images/icons/position.svg) center center no-repeat;
+}
+.node-type-patient-sheet .field-name-field-patient-status .field-item:before {
+  content: "";
+  display: block;
+  width: 100px;
+ /* height: 100px; */
+  margin: auto;
+}
+.node-type-patient-sheet .field-name-field-patient-status .None:before  {
+  background: url(../../images/icons/treatment-none.svg) center center no-repeat;
+}
+.node-type-patient-sheet .field-name-field-patient-status .Under.Treatment:before  {
+  background: url(../../images/icons/treatment-processing.svg) center center no-repeat;
+}
+.node-type-patient-sheet .field-name-field-patient-status .Treatment.Completed:before  {
+  background: url(../../images/icons/treatment-ok.svg) center center no-repeat;
+}
+.node-type-patient-sheet .field-name-field-patient-area-of-injury {
+  min-height: 200px;
+  background: url(../../images/icons/body-shape.svg) left 15% center no-repeat;
+  background-size: auto 100%;
+}
+.node-patient_sheet-form {
+  text-align: center;
+}
+.node-type-patient-sheet.page-node-edit .form-item-title {
+  display: block;
+}
+.field-name-field-patient-age .field-items {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.field-name-field-patient-age:after {
+  content:"years old";
+  display: inline-block;
+  visibility: visible;
+}
+.page-node-add .field-name-field-patient-age:after,
+.page-node-edit .field-name-field-patient-age:after,
+.field-name-field-patient-sheet-referral-id .field-label:after {
+  display: none;
+}
+/** Edit page Patient Sheet */
+.node-patient_sheet-form {
+  text-align: left;
+}
+.page-node-edit.node-type-patient-sheet .field-name-field-patient-dob .field-label:before,
+.page-node-edit.node-type-patient-sheet .field-name-field-patient-address .field-label:before {
+  display: none;
+}
+.page-node-edit .field-name-field-patient-age:after {
+  display: none;
+}
+.page-node-edit.node-type-patient-sheet .field-name-field-patient-area-of-injury {
+  background: none;
+}
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  position: relative;
+  vertical-align: top;
+  margin: 1em;
+  text-align: center;
+}
+.node-type-patient-sheet #edit-field-patient-status-und,
+.page-node-add-patient-sheet #edit-field-patient-status-und {
+  text-align: center;
+}
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio label,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio label {
+  height: 250px;
+  width: 100%;
+  padding-left: 0;
+}
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(1) label,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(1) label {
+	
+	background: url(../../images/statusicon/hold-1.png) center center no-repeat;
+ 
+}
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(2) label,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(2) label {
+   background: url(../../images/statusicon/none-1.png) center center no-repeat;
+}
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(3) label,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(3) label {
+  background: url(../../images/statusicon/allocated-1.png) center center no-repeat;
+}
+
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(4) label,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(4) label {
+  background: url(../../images/statusicon/cancel.png) center center no-repeat;
+}
+
+
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(5) label,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(5) label {
+  background: url(../../images/statusicon/under-treatment.png) center center no-repeat;
+}
+
+
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(6) label,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(6) label {
+  background: url(../../images/statusicon/pending.png) center center no-repeat;
+}
+
+.node-type-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(7) label,
+.page-node-add-patient-sheet .field-name-field-patient-status .form-type-radio:nth-child(7) label {
+  background: url(../../images/statusicon/completed.png) center center no-repeat;
+}
+
+
+
+
+
+
+
+.node-type-patient-sheet #edit-field-patient-area-of-injury-und ,
+.page-node-add-patient-sheet #edit-field-patient-area-of-injury-und {
+  text-align: right;
+  background: url(../../images/icons/body-shape.svg) center center no-repeat;
+  background-size: auto 100%;
+}
+.node-type-patient-sheet .form-item-field-patient-area-of-injury-und .form-item,
+.page-node-add-patient-sheet .form-item-field-patient-area-of-injury-und .form-item {
+  margin-top: 10px;
+  margin-right: 15%;
+  display: block;
+}
+.node-type-patient-sheet .form-item-field-patient-area-of-injury-und .form-item:first-child,
+.page-node-add-patient-sheet .form-item-field-patient-area-of-injury-und .form-item:first-child {
+  margin-top: 0;
+}
+.node-type-patient-sheet .field-name-field-patient-referral-date,
+.node-type-patient-sheet .field-name-field-patient-sheet-referral-id {
+  display: inline-block;
+  width: 49%;
+  font-size: 2em;
+}
+.node-type-patient-sheet.page-node-edit .field-name-field-patient-referral-date,
+.node-type-patient-sheet.page-node-edit .field-name-field-patient-sheet-referral-id {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+}
+.node-type-patient-sheet .field-name-field-patient-referral-date {
+  text-align: right;
+}
+.node-type-patient-sheet.page-node-edit .field-name-field-patient-referral-date {
+  text-align: left;
+}
+/** Company pages **/
+.node-company-sheet {
+  text-align: center;
+}
+.page-node-edit.node-type-company-sheet .breadcrumb {
+  display: none;
+}
+.node-type-company-sheet .field-name-field-company-title,
+.node-type-company-sheet .field-name-field-company-full-name {
+  display: inline-block;
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+/** Network Company pages **/
+.node-network-company-sheet {
+  text-align: center;
+}
+.node-type-network-company-sheet .field-name-field-company-net-title,
+.node-type-network-company-sheet .field-name-field-company-net-full-name {
+  display: inline-block;
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+/** Establishment pages **/
+.node-company-establishment {
+  text-align: center;
+}
+/** Invoices **/
+.group.panel-info {
+  position: relative;
+}
+.node-invoice .field-label:after {
+  display: none;
+}
+.page-node-add-invoice .field-name-field-invoice-app-status-1,
+.page-node-add-invoice .field-name-field-invoice-app-status-2,
+.page-node-add-invoice .field-name-field-invoice-app-status-3,
+.page-node-add-invoice .field-name-field-invoice-app-status-4,
+.page-node-add-invoice .field-name-field-invoice-app-status-5,
+.page-node-add-invoice .field-name-field-invoice-app-status-6,
+.page-node-add-invoice .field-name-field-invoice-app-status-7,
+.page-node-add-invoice .field-name-field-invoice-app-status-8,
+.page-node-add-invoice .field-name-field-invoice-app-status-9,
+.page-node-add-invoice .field-name-field-invoice-app-status-10,
+.page-node-add-invoice .field-name-field-invoice-app-status-11,
+.page-node-add-invoice .field-name-field-invoice-app-status-12,
+.page-node-add-invoice .field-name-field-invoice-app-status-13,
+.page-node-add-invoice .field-name-field-invoice-app-status-14,
+.page-node-add-invoice .field-name-field-invoice-app-status-15 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.page-node-add-invoice .field-name-field-invoice-app-status-1 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-2 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-3 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-4 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-5 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-6 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-7 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-8 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-9 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-10 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-11 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-12 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-13 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-14 label,
+.page-node-add-invoice .field-name-field-invoice-app-status-15 label {
+  display: none;
+}
+.page-node-add-invoice .field-name-field-invoice-app-status-1 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-2 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-3 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-4 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-5 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-6 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-7 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-8 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-9 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-10 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-11 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-12 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-13 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-14 input,
+.page-node-add-invoice .field-name-field-invoice-app-status-15 input {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+}
+.node-type-invoice .main-container .tabs--primary,
+.node-type-invoice .main-container .region-help,
+.node-type-invoice .main-container .region-content  {
+  max-width: 900px;
+  margin: auto;
+}
+.field-name-field-invoice-session-price {
+  display: none;
+}
+.node-type-invoice.role-hsrehab-admin .alert-info {
+  display: none;
+}
+.node-type-invoice.page-node-edit .form-item-title {
+  display: none;
+}
+/** Triage Form **/
+.node-triage_assessment_form-form,
+.node-triage-assessment-form {
+  text-align: center;
+}
+.node-triage-assessment-form .field {
+  margin-bottom: 30px;
+}
+.page-node-add-triage-assessment-form #edit-field-triage-form-injury-area-und,
+.node-type-triage-assessment-form #edit-field-triage-form-injury-area-und {
+  text-align: right;
+  background: url(../../images/icons/body-shape.svg) center center no-repeat;
+  background-size: auto 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-node-add-triage-assessment-form #edit-field-triage-form-injury-area-und .form-type-checkbox,
+.node-type-triage-assessment-form #edit-field-triage-form-injury-area-und .form-type-checkbox,
+.page-node-add-triage-assessment-form .field-name-field-triage-form-injury-pain .form-type-checkbox,
+.node-type-triage-assessment-form .field-name-field-triage-form-injury-pain .form-type-checkbox {
+  margin-right: 0;
+  display: block;
+}
+/** Reports **/
+.role-auditor.node-type-ml-discharge-report .nav-tabs,
+.role-auditor.node-type-ml-initial-assessment-report .nav-tabs,
+.role-auditor.node-type-och-discharge-report .nav-tabs,
+.role-auditor.node-type-och-initial-assessment-report .nav-tabs {
+  display: none;
+}
+.role-hsrehab-admin.node-type-triage-assessment-form .nav-tabs {
+  display: none;
+}
+.role-auditor.page-node-edit.node-type-och-initial-assessment-report .group-clinician-details,
+.role-auditor.page-node-edit.node-type-och-initial-assessment-report .group-clinical-informations,
+.role-auditor.page-node-edit.node-type-och-initial-assessment-report .group-treatment-status,
+.role-auditor.page-node-edit.node-type-och-discharge-report .group-clinician-details,
+.role-auditor.page-node-edit.node-type-och-discharge-report .group-injury-informations,
+.role-auditor.page-node-edit.node-type-och-discharge-report .group-work-status,
+.role-auditor.page-node-edit.node-type-ml-discharge-report .group-clinical-infos {
+  display: none;
+}
+.node-och_initial_assessment_report-form,
+.node-och-initial-assessment-report,
+.node-och_discharge_report-form,
+.node-och-discharge-report,
+.node-ml_initial_assessment_report-form,
+.node-ml-initial-assessment-report,
+.node-ml_discharge_report-form,
+.node-ml-discharge-report {
+  text-align: center;
+}
+.node-och-initial-assessment-report .group-consent {
+  display: none;
+}
+.node-och-initial-assessment-report .field,
+.node-och-discharge-report .field,
+.node-ml-initial-assessment-report .field,
+.node-ml-discharge-report .field {
+  margin-bottom: 30px;
+}
+.node-och-initial-assessment-report .field-name-field-och-inirep-injury-date {
+  margin-bottom: 0;
+}
+.page-node-add-och-initial-assessment-report #edit-field-och-inirep-area-injured-und,
+.node-type-och-initial-assessment-report #edit-field-och-inirep-area-injured-und {
+  text-align: right;
+  background: url(../../images/icons/body-shape.svg) center center no-repeat;
+  background-size: auto 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-node-add-och-initial-assessment-report #edit-field-och-inirep-area-injured-und .form-type-checkbox,
+.node-type-och-initial-assessment-report #edit-field-och-inirep-area-injured-und .form-type-checkbox {
+  margin-right: 0;
+  display: block;
+}
+.node-type-ml-initial-assessment-report .field-name-field-ml-inirep-treatment-plan th,
+.node-type-ml-initial-assessment-report .field-name-field-ml-inirep-treatment-plan td,
+.node-type-ml-discharge-report .field-name-field-ml-diresp-treatment-stated th,
+.node-type-ml-discharge-report .field-name-field-ml-diresp-treatment-stated td {
+  padding: 1em;
+}
+/** Frequently Asked Questions **/
+.role-authenticated-user .faq-anonymous {
+  display: none;
+}
+.role-anonymous-user .faq-authenticated {
+  display: none;
+}
+/**
+  * Views
+**/
+.view-footer {
+  margin-top: 15px;
+  text-align: center;
+}
+.views-widget {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.views-widget .form-item-keys {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.views-exposed-form .views-exposed-widget {
+  float: none;
+}
+.views-exposed-form .views-exposed-widget.views-submit-button {
+  text-align: center;
+}
+/** List of appointment **/
+ul.quicktabs-tabs li {
+  display: inline-block;
+  float: none;
+}
+ul.quicktabs-tabs {
+  text-align: center;
+}
+.view-appointment-list .views-field-field-appointment-confirmation div,
+.view-appointment-list .views-field-field-appointment-status-1 div {
+  display: none;
+}
+.view-appointment-list > .view-content tr.Fast.Track,
+.view-appointment-list > .view-content tr.Fast.Track td.active {
+  background-color: rgba(77,196,196,0.2);
+}
+.view-appointment-list .views-field-nothing {
+  margin-top: 8px;
+  border-top: 1px solid #dddddd;
+}
+.page-node-340 .view-appointment-list .views-field-nothing {
+  border-top: 0;
+}
+/*.view-appointment-list > .view-content:before {
+  content: "Appointments request";
+  display: block;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #2d2d2d;
+}*/
+.view-appointment-list .views-field-field-appointment-status-1.attended_Attended:before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../../images/icons/ok.svg) center center no-repeat;
+}
+.view-appointment-list .views-field-field-appointment-status-1.attended_Not-Attended:before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../../images/icons/close.svg) center center no-repeat;
+}
+.view-appointment-list .views-field-field-appointment-triapp-status.Attended {
+  color: #3fb618;
+}
+.view-appointment-list .views-field-field-appointment-triapp-status.Not-Attended {
+  color: #ff0039;
+}
+/** Company informations **/
+.role-staff .view-id-company_information .views-field-nothing,
+.role-staff .view-id-company_information .views-field-edit-node,
+.role-staff .view-id-company_information .view-footer {
+  display: none;
+}
+/** Company information **/
+.role-staff .view-company-information .btn {
+  display: none;
+}
+.view-company-information .views-field {
+  margin: 15px 0;
+}
+.view-company-information .views-field.inline-block {
+  margin-top: 0;
+}
+/** Patient informations **/
+
+/** Session List **/
+.view-session-list .views-field-field-session-app-date-1 span {
+  display: none;
+}
+.view-session-list .views-field-field-session-app-date-1 span:last-child {
+  display: block;
+}
+/** Calendar **/
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview {
+  background-color: #e6e6e6;
+}
+.calendar-calendar .month-view .full .inner .monthview,
+.calendar-calendar .week-view .full .inner .weekview,
+.calendar-calendar .day-view .full .inner .dayview {
+  border-radius: 0;
+}
+.calendar-calendar .Session,
+.calendar-calendar .Appointment-Request {
+  font-size: 0;
+  text-align: center;
+}
+.calendar-calendar .Session:before {
+  content:"Session";
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+}
+.calendar-calendar .Appointment-Request:before {
+  content:"Triage";
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+}
+.calendar-calendar .appointment-date .views-field {
+  display: none;
+}
+.calendar-calendar .appointment-date .views-field:last-child {
+  display: block;
+}
+.view-staff-calendar {
+  max-width: 80%;
+  margin: auto;
+}
+/** Views slideshow **/
+#block-views-front-banner-highlighted {
+  position: relative;
+}
+#views_slideshow_cycle_teaser_section_front_banner-block {
+  width: 100% !important;
+}
+.views_slideshow_cycle_slide.views_slideshow_slide,
+.views_slideshow_cycle_slide.views_slideshow_slide img {
+  width: 100% !important;
+}
+.view-display-id-highlighted .views-slideshow-controls-bottom {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 20px;
+  z-index: 200;
+}
+.views-slideshow-pager-field-item a {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fcb54d;
+  font-size: 0px;
+  border-radius: 10px;
+  -moz-transition: all 1s ease-in;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+.views-slideshow-pager-field-item.active a {
+  background-color: #fcb54d;
+  -moz-transition: all 1s ease-in;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+.jcarousel-skin-default .jcarousel-item {
+  background: transparent;
+  border: 0;
+  height: auto;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.jcarousel-prev,
+.jcarousel-next {
+  display: none !important;
+}
+.view-display-id-client .views-slideshow-controls-bottom {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 35%;
+  z-index: 200;
+}
+.vscc_controls_pause {
+  display: none;
+}
+.vscc_controls_next {
+  float: right;
+}
+.vscc_controls_previous {
+  float: left;
+}
+/** Invoice Table **/
+.node-type-invoice.not-front.no-sidebars .main-container .row {
+  margin-bottom: 0;
+}
+.view-id-Invoice_list.view-display-id-block td .table-raw {
+  display: block;
+  padding: 1em;
+  border-bottom: 1px solid #333;
+}
+.group-invoice-table {
+  clear: both;
+}
+.node-type-invoice .view-footer {
+  position: absolute;
+}
+/** Clinic locator tool **/
+.view-clinic-locator-tool .form-item-field-geofield-distance-origin {
+  display: inline-block;
+  max-width: 40%;
+}
+.view-clinic-locator-tool .form-item-field-geofield-distance-origin input {
+  min-width: 80px;
+}
+.view-clinic-locator-tool .form-type-geofield-proximity {
+  margin: 0;
+}
+.view-clinic-locator-tool .views-exposed-form .description {
+  text-align: right;
+}
+.view-clinic-locator-tool .views-exposed-widget {
+  float: right;
+}
+.view-clinic-locator-tool .views-exposed-form .views-exposed-widget .btn {
+  margin-top: 0;
+}
+/**
+  * Custom modules
+**/
+/** Address field **/
+.addressfield-phone-block {
+  font-weight: bold;
+}
+.page-node-edit .field-type-addressfield,
+.page-node-add .field-type-addressfield {
+  max-width: 80%;
+ /* margin-left: auto;*/
+  margin-right: auto;
+}
+.field-type-addressfield .custom-block {
+  text-align: center;
+  margin-top: 1em;
+}
+.form-item-field-patient-address-und-0-field-patient-address-widget-fax-number {
+  display: none;
+}
+.field-type-addressfield .addressfield-container-inline,
+.field-type-addressfield .form-item-field-patient-address-und-0-field-patient-address-widget-mobile-number,
+.field-type-addressfield .form-item-field-company-net-address-und-0-field-company-net-address-widget-mobile-number,
+.field-type-addressfield .form-item-field-company-address-und-0-field-company-address-widget-mobile-number,
+.field-type-addressfield .form-item-field-company-address-und-0-field-company-address-widget-fax-number,
+.form-item-field-invoice-practice-address-und-0-field-invoice-practice-address-widget-mobile-number,
+.form-item-field-invoice-practice-address-und-0-field-invoice-practice-address-widget-fax-number,
+.form-item-field-company-net-address-und-0-field-company-net-address-widget-fax-number,
+.form-item-field-establishment-address-und-0-field-establishment-address-widget-mobile-number,
+.form-item-field-establishment-address-und-0-field-establishment-address-widget-fax-number {
+  display: inline-block;
+  margin-right: 1em;
+  vertical-align: top;
+}
+.pac-container {
+  margin-top: -100px; /* Correct fixed navbar shifting positioning */
+}
+/** Recaptcha **/
+.captcha {
+  width: 304px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+/** Webforms **/
+.block-webform,
+.webform-content {
+  margin-top: 30px;
+  background: #f5f5f5;
+  padding-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+.node-webform .webform-client-form {
+  padding-top: 50px;
+}
+.block-webform .glyphicon.glyphicon-bookmark,
+.webform-content .glyphicon.glyphicon-bookmark {
+  font-size: 60px;
+  position: absolute;
+  color: #f4a535;
+  left: 0;
+  top:0;
+}
+.webform-progressbar {
+  width: 80%;
+  margin: 50px auto 100px;
+}
+.webform-progressbar-inner {
+  background-color: #f4a535;
+}
+.webform-progressbar-page {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: -15px -4px;
+    border: 1px solid #356900;
+    border-radius: 0;
+}
+.webform-progressbar-page .webform-progressbar-page-label {
+  top: 25px;
+}
+.webform-progressbar-page .webform-progressbar-page-number {
+  display: inline;
+  position: absolute;
+  left: 6px;
+  top: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+.webform-progressbar-page.current {
+  background-color: #3fb618;
+}
+.block-webform .form-group,
+.node-webform .form-group {
+  margin-bottom: 15px;
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.webform-client-form .webform-component--professions {
+  width: 100%;
+}
+.webform-client-form .webform-component--professions .form-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+.webform-confirmation {
+  text-align: center;
+}
+.webform-next {
+  text-align: right;
+}
+.node-webform .form-actions {
+  margin-top: 15px;
+}
+/** Ckeditor **/
+.cke_1_path,
+.cke_path {
+  display: none;
+}

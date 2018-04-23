@@ -1,0 +1,142 @@
+/** General configurations **/
+body {
+  font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #333333;
+}
+.inline {
+  display: inline-block;
+  margin-left: 1em;
+}
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row:before {
+  content: " ";
+  display: table;
+}
+.row:after {
+  content: " ";
+  display: table;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+h1, h2, h3 {
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+}
+h1 {
+  font-size: 30px;
+  color: #fcb54d;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+}
+h2 {
+  font-size: 25px;
+  color: #f4a535;
+  text-transform: uppercase;
+  text-align: center;
+}
+h3 {
+  color: #f4a535;
+  font-size: 19px;
+  font-weight: normal;
+  border-bottom: 1px solid #f4a535;
+}
+h6 {
+  font-size: 13px;
+  text-align: center;
+}
+a {
+  color: #f4a535;
+}
+a:hover {
+  color: #cb841f;
+}
+.col-4 {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.col-6 {
+  width: 50%;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.col-8 {
+  width: 75%;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.clearfix {
+  clear: both;
+}
+/**
+  * Theming the Body
+**/
+#main {
+  max-width: 500px;
+  margin: 50px;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+}
+.logo {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  display: block;
+}
+ul.no-style li {
+
+}
+footer {
+  margin-top: 50px;
+  padding-top: 15px;
+  border-top: 1px solid #f4a535;
+}
+rtable {  /*!  // IE needs inline-block to position scrolling shadows otherwise use:  // display: block;  // max-width: min-content;  */  display: inline-block;  vertical-align: top;  max-width: 100%;    overflow-x: auto;    // optional - looks better for small cell values  white-space: nowrap;  border-collapse: collapse;  border-spacing: 0;}.rtable,.rtable--flip tbody {  // optional - enable iOS momentum scrolling  -webkit-overflow-scrolling: touch;    // scrolling shadows  background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,              radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;  background-size: 10px 100%, 10px 100%;  background-attachment: scroll, scroll;  background-repeat: no-repeat;}// change these gradients from white to your background colour if it differs// gradient on the first cells to hide the left shadow.rtable td:first-child,.rtable--flip tbody tr:first-child {  background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);  background-repeat: no-repeat;  background-size: 20px 100%;}// gradient on the last cells to hide the right shadow.rtable td:last-child,.rtable--flip tbody tr:last-child {  background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);  background-repeat: no-repeat;  background-position: 100% 0;  background-size: 20px 100%;}.rtable th {  font-size: 11px;  text-align: left;  text-transform: uppercase;  background: #f2f0e6;}.rtable th,.rtable td {  padding: 6px 12px;  border: 1px solid #d9d7ce;}.rtable--flip {  display: flex;  overflow: hidden;  background: none;}.rtable--flip thead {  display: flex;  flex-shrink: 0;  min-width: min-content;}.rtable--flip tbody {  display: flex;  position: relative;  overflow-x: auto;  overflow-y: hidden;}.rtable--flip tr {  display: flex;  flex-direction: column;  min-width: min-content;  flex-shrink: 0;}.rtable--flip td,.rtable--flip th {  display: block;}.rtable--flip td {  background-image: none !important;  // border-collapse is no longer active  border-left: 0;}// border-collapse is no longer active.rtable--flip th:not(:last-child),.rtable--flip td:not(:last-child) {  border-bottom: 0;}/*!// CodePen house keeping*/body {  margin: 0;  padding: 25px;  color: #494b4d;  font-size: 14px;  line-height: 20px;}h1, h2, h3 {  margin: 0 0 10px 0;  color: #1d97bf;}h1 {  font-size: 25px;  line-height: 30px;}h2 {  font-size: 20px;  line-height: 25px;}h3 {  font-size: 16px;  line-height: 20px;}table {  margin-bottom: 30px;}a {  color: #ff6680;}code {  background: #fffbcc;  font-size: 12px;}
+
+@media screen and (min-width: 500px) {
+  #main {
+    max-width: 500px;
+    margin: 50px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .col-sm-4 {
+    width: 25%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .col-sm-8 {
+    width: 75%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+}

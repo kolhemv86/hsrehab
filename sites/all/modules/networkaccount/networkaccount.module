@@ -1,0 +1,898 @@
+<?php
+
+/*define('DRUPAL_ROOT', getcwd());
+require_once DRUPAL_ROOT . '/includes/password.inc';
+*/
+
+
+
+function networkaccount_menu() {
+  
+  $items['visit/plan/user/%'] = array(
+    'page callback' => 'user_ajax_get_ajax', // Render HTML.
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+ 
+  
+   $items['get/staff/user/%'] = array(
+    'page callback' => 'get_user_staff', // Render HTML.
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+   $items['get/rate/clinic/%'] = array(
+    'page callback' => 'get_rate_clinic', // Render HTML.
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+  
+   $items['create/pdf/%'] = array(
+    'page callback' => 'create_pdf', // Render HTML.
+    'page arguments' => array(2),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+   $items['create/ochpdf/%'] = array(
+    'page callback' => 'create_ochpdf', // Render HTML.
+    'page arguments' => array(2),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+  
+    $items['create/triage/%'] = array(
+    'page callback' => 'create_triagepdf', // Render HTML.
+    'page arguments' => array(2),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+  
+  
+  $items['send/mail/%/%'] = array(
+    'page callback' => 'sendmailattach', // Render HTML.
+    'page arguments' => array(2,3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+  $items['send/ochmail/%/%'] = array(
+    'page callback' => 'sendochmail', // Render HTML.
+    'page arguments' => array(2,3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+  $items['send/triage/%/%'] = array(
+    'page callback' => 'sendmailtriage', // Render HTML.
+    'page arguments' => array(2,3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+  
+  $items['report/assign/user/%/%/%'] = array(
+    'page callback' => 'assign_report', // Render HTML.
+    'page arguments' => array(3,4,5),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+  $items['node/frm/%/%/%/%/%'] = array(
+    'page callback' => 'subittednode', // Render HTML.
+    'page arguments' => array(2,3,4,5,6),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    //'delivery callback' => 'vistplanajax_ajax_callback',  // Magic goes here.
+  );
+  
+  $items['node/sess/%/%/%/%'] = array(
+    'page callback' => 'editsessionnode', // Render HTML.
+    'page arguments' => array(2,3,4,5),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    
+  );
+  
+  $items['book/app/%/%/%/%'] = array(
+    'page callback' => 'bookapp', // Render HTML.
+    'page arguments' => array(2,3,4,5),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    
+  );
+  
+  $items['out/patient'] = array(
+    'page callback' => 'outstand', // Render HTML.
+    //'page arguments' => array(2,3,4,5),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    
+  );
+  
+   $items['audireport/validate/%/%/%/%'] = array(
+    'page callback' => 'auditorval', // Render HTML.
+    'page arguments' => array(2,3,4,5),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+    
+  );
+  
+  $items['menu/%ctools_js/node/%node/edit'] = array(
+'title' => '',
+'page callback' => 'menu_modal_popup',
+'page arguments' => array(1,3),
+'access callback' => TRUE,
+'type' => MENU_CALLBACK,
+);
+  
+  
+  
+  
+ 
+  
+  
+  return $items;
+}
+
+
+
+function menu_modal_popup($js = NULL,$node)
+{
+if(!$js)
+{
+return render(node_view($node, 'full', NULL));
+}
+ctools_include('modal');
+ctools_include('ajax');
+$contents = render(node_view($node, 'full', NULL));
+
+return ctools_modal_render($node->title, $contents) ;
+}
+
+
+function networkaccount_block_info() {
+	
+  $blocks['notification'] = array(
+    // The name that will appear in the block list.
+    'info' => t('notification'),
+    // Default setting.
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  return $blocks;
+}
+
+
+
+function networkaccount_block_view($delta = '') {
+  $block = array();
+
+  if ($delta == 'notification') {
+  
+  $result = db_query("SELECT * from {node} where type='patient_sheet' ORDER BY nid DESC LIMIT 1");
+  $record = $result->fetchAll();
+	
+	
+	
+    $output = '<div class="alert alert-block alert-success messages status">
+  
+      <a class="close" data-dismiss="alert" href="#">×</a>';
+     
+       $output .= '
+     
+        Notification : New Patient <em class="placeholder">'.$record[0]->title.'</em> Referral
+      
+	   
+     
+    ';
+   
+	
+	
+      $output .='</div>';
+    
+	
+	
+	
+	$block['subject'] = t('Hello world Subject');
+    $block['content'] = $output;
+  }
+
+  return $block;
+}
+
+
+
+
+
+function mail_attachment($to, $subject,$file,$htmlContent) {
+ 
+        $from = variable_get('site_mail');
+        $fromName = variable_get('site_name');;
+		//header for sender info
+		$headers = "From: $fromName"." <".$from.">";
+
+		//boundary 
+		$semi_rand = md5(time()); 
+		$mime_boundary = "==Multipart_Boundary_x{$semi_rand}x"; 
+
+		//headers for attachment 
+		$headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\""; 
+
+		//multipart boundary 
+		$message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
+		"Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n"; 
+
+		//preparing attachment
+		if(!empty($file) > 0){
+			if(is_file($file)){
+				$message .= "--{$mime_boundary}\n";
+				$fp =    @fopen($file,"rb");
+				$data =  @fread($fp,filesize($file));
+
+				@fclose($fp);
+				$data = chunk_split(base64_encode($data));
+				$message .= "Content-Type: application/octet-stream; name=\"".basename($file)."\"\n" . 
+				"Content-Description: ".basename($files[$i])."\n" .
+				"Content-Disposition: attachment;\n" . " filename=\"".basename($file)."\"; size=".filesize($file).";\n" . 
+				"Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+			}
+		}
+		$message .= "--{$mime_boundary}--";
+		$returnpath = "-f" . $from;
+
+		//send email
+		return $mail = @mail($to, $subject, $message, $headers, $returnpath); 
+
+
+}
+
+
+
+
+
+
+
+function user_ajax_get_ajax($name)
+{
+	
+	$chekuser = user_load_by_name(check_plain($name));	
+	 
+	 if(empty($chekuser))
+	 {
+		 $msg = "";
+	 }else{
+		 
+		 $msg = "This username already taken Please choose different name.";
+	 }		 
+	  
+	  echo $msg;
+	
+}
+
+
+function networkaccount_node_update($node) {
+  
+  
+   $ctype = $node->type;
+   
+  if($ctype == "triage_assessment_form")
+	 {
+		 $nodeobj = node_load($node->nid);
+		 $pid = $nodeobj->field_triage_form_att_app['und'][0]['target_id'];
+		
+			if($nodeobj->field_does_this_ptient_need_refe['und'][0]['value'] == 1)
+			{
+				$patobj = node_load($pid);
+				$patobj->field_patient_status['und'][0]['target_id'] = 22;
+				node_save($patobj);
+				//drupal_goto("$base_url/triage-completed");
+			
+			}		
+		 
+		 
+	 }
+	 
+  if($ctype == "patient_sheet")
+  {
+	   
+	   
+	   
+	   
+	  $assignorder = variable_get('assign_order');
+	  $newassignorder = $assignorder+1; 
+	  variable_set('assign_order',$newassignorder);
+	  
+	  
+	  $assignorder_close = variable_get('assign_close_order');
+	  $newassignorder_close = $assignorder_close+1; 
+	  variable_set('assign_close_order',$newassignorder_close);
+	  
+	  
+	 
+  }	  
+	 
+	 
+	 
+
+
+}
+
+
+function networkaccount_node_insert($node) {
+ 
+ global $base_url;
+     
+	 
+	 $ctype = $node->type;
+	 
+	 $password = $node->field_hidden['und'][0]['value'];
+	 $username = $node->field_username; 
+	 $email = $node->field_company_net_mail_address;
+	
+	 $cpassword = $node->field_confirm_password;
+	 
+	 
+	 
+	 if($ctype == "triage_assessment_form")
+	 {
+		 $nodeobj = node_load($node->nid);
+		 /*echo "<pre>";
+		 print_r($nodeobj);
+		 exit;*/
+		 
+		 
+		 $pid = $nodeobj->field_triage_form_att_app['und'][0]['target_id'];
+		
+
+     		if($nodeobj->field_does_this_patient_need_rev['und'][0]['value'] == 0)
+			{
+				$patobj = node_load($pid);
+				$patobj->field_patient_status['und'][0]['target_id'] = 22;
+				node_save($patobj);
+				
+			
+			}else{
+				
+				$patobj1 = node_load($pid);
+				
+				$title = $patobj1->title;
+				$nodeobj->title = 'Triage Follow-up Report '.$title;
+				node_save($nodeobj);
+				
+				
+			}
+		
+           		 
+		 
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	
+	 if($ctype == "network_company_sheet")
+	 {
+	    if(count($username)>0)
+		{			
+		 
+         
+				$name = $username['und'][0]['value'];
+				$chekuser = user_load_by_name(check_plain($name));	
+			  
+			  if(empty($chekuser)){
+				 
+				 $newUser = array(
+					  
+					  'name' => $username['und'][0]['value'],
+					  'pass' => $password,
+					  'mail' => $email['und'][0]['email'],
+					  'status' => 1,
+					  'roles' => array(
+					   DRUPAL_AUTHENTICATED_RID => 'authenticated user',
+					  14 => 'Newtwork Admin ', // role id for custom roles varies per website
+					 ),
+					  'init' =>  $email['und'][0]['email'],
+				  );
+					  $account = user_save(null, $newUser);
+					  
+					  $uid = $account->uid;
+					  $userobj = user_load($uid);
+					 
+					  
+					  
+					  $userobj -> field_user_company['und'][0]['target_id'] = $node->nid;
+					  
+					  user_save($userobj);
+					  
+					  
+					  
+					  
+					  $op = 'register_no_approval_required';
+					   _user_mail_notify($op, $account);
+				  
+			  }else{
+			
+			
+				//drupal_goto('node/add/network-company-sheet?destination=/dashboard');
+				//drupal_set_message('User already Exits'); 	  
+					  
+				
+				
+			  }	
+		}
+
+		
+	}
+	
+	
+	if($ctype == "och_discharge_report")
+	{
+		    $ochnodeobj = node_load($node->nid);
+            $ochsessnid = $ochnodeobj->field_och_session_id['und'][0]['target_id'];
+		    $sessionnodeobj = node_load($ochsessnid);
+			$sessionnodeobj->field_session_och_disrep['und'][0]['value'] = 1;
+			$sessionnodeobj->field_session_in_out['und'][0]['value'] = 0;
+			$sessionnodeobj->field_och_init_in_out['und'][0]['value'] = 0;
+			node_save($sessionnodeobj);
+	}
+	
+	if($ctype == "ml_discharge_report")
+	{
+		    $mlnodeobj = node_load($node->nid);
+			$mlsessnid = $mlnodeobj->field_ml_session_id['und'][0]['target_id'];
+			$sessionnodeobj1 = node_load($mlsessnid);
+			$sessionnodeobj1->field_session_ml_disrep['und'][0]['value'] = 1;
+			$sessionnodeobj1->field_session_in_out['und'][0]['value'] = 0;
+			$sessionnodeobj1->field_ml_in_out['und'][0]['value'] = 0;
+			node_save($sessionnodeobj1);
+		     
+	}
+	
+	if($ctype == "och_initial_assessment_report")
+	{
+		    $ochinitnodeobj = node_load($node->nid);
+			$ochinitsessnid = $ochinitnodeobj->field_och_init_session_id['und'][0]['target_id'];
+			$sessioninitnodeobj1 = node_load($ochinitsessnid);
+			$sessioninitnodeobj1->field_session_och_inirep['und'][0]['value'] = 1;
+			$sessioninitnodeobj1->field_session_in_out['und'][0]['value'] = 0;
+			$sessioninitnodeobj1->field_och_init_in_out['und'][0]['value'] = 1;
+			node_save($sessioninitnodeobj1);
+		  
+	}
+	
+	if($ctype == "ml_initial_assessment_report")
+	{
+		    $mlinitnodeobj = node_load($node->nid);
+			$mlinitsessnid = $mlinitnodeobj->field_ml_init_session_id['und'][0]['target_id'];
+			
+			$mlinitnodeobj1 = node_load($mlinitsessnid);
+			$mlinitnodeobj1->field_session_ml_inirep['und'][0]['value'] = 1;
+			$mlinitnodeobj1->field_session_in_out['und'][0]['value'] = 0;
+			$mlinitnodeobj1->field_ml_in_out['und'][0]['value'] = 1;
+			node_save($mlinitnodeobj1);
+		    
+	}
+	
+	
+ 
+}
+
+
+function create_pdf($nid)
+{
+   global $base_url;
+   $node = node_load($nid);
+   $node->field_pdf['und'][0]['value'] = '1';
+   $node->field_ml_dis_pdf['und'][0]['value'] = '1';
+   
+   node_save($node);   
+   drupal_set_message('PDF Created Successfully.');
+   drupal_goto("$base_url/node/$nid/pdf"); 
+        
+}  
+
+function create_ochpdf($nid)
+{
+   global $base_url;
+   
+   
+   //$node = node_load($nid);
+   //$node->field_pdf['und'][0]['value'] = '1';
+   //node_save($node);   
+   drupal_set_message('PDF Created Successfully.');
+   drupal_goto("$base_url/node/$nid/pdf"); 
+	
+	
+}
+
+
+function create_triagepdf($nid)
+{
+   global $base_url;
+   $node = node_load($nid);
+   $node->field_triage_pdf['und'][0]['value'] = '1';
+   node_save($node); 
+   
+   drupal_set_message('PDF Created Successfully.');
+   drupal_goto("$base_url/node/$nid/pdf"); 
+	
+}
+
+
+
+function sendmailattach($nid,$uid)
+{
+	
+		 global $base_url;
+		 $sitemail = variable_get('site_mail');
+		 $sitename = variable_get('site_name');
+		 
+		 $node = node_load($nid);
+		 $title = $node->title;
+		 
+		 $userobj = user_load($uid);
+		 
+		 
+		 $filepathname = "sites/default/files/pdf_using_mpdf/$sitename - $nid - $title.pdf";
+		$dir = "sites/default/files/pdf_using_mpdf";
+		$files = file_scan_directory($dir, '/.*\.pdf$/');
+		$fcount = count($files[$filepathname]);
+	
+		if($fcount == 0)
+		{
+			drupal_set_message('Send report failed..Please pdf generate first then send report');
+			drupal_goto("$base_url/medico-legal-report-new");
+			
+		}else{ 
+				
+				$to = $userobj->mail;
+				$subject = 'Report for '.$title; 
+				$file = "sites/default/files/pdf_using_mpdf/$sitename - $nid - $title.pdf";
+				$htmlContent = '<h1></h1>
+				<p></p>';
+				mail_attachment($to, $subject,$file,$htmlContent);
+				drupal_set_message('Mail has been Successfully sent');
+				drupal_goto("$base_url/medico-legal-report-new");
+
+		}
+}
+  
+  
+function sendochmail($nid,$uid)
+{
+	 global $base_url;
+	 
+     $sitename = variable_get('site_name');
+	 $sitemail = variable_get('site_mail');
+	 
+	 $node = node_load($nid);
+	 $title = $node->title;
+	 
+	 $userobj = user_load($uid);
+	 
+    $filepathname = "sites/default/files/pdf_using_mpdf/$sitename - $nid - $title.pdf";
+    $dir = "sites/default/files/pdf_using_mpdf";
+    $files = file_scan_directory($dir, '/.*\.pdf$/');
+	$fcount = count($files[$filepathname]);
+	
+		if($fcount == 0)
+		{
+			drupal_set_message('Send report failed..Please pdf generate first then send report');
+			drupal_goto("$base_url/och-auditedreport");
+			
+		}else{
+			
+			
+		 $to = $userobj->mail;
+		 $subject = 'Report for '.$title; 
+		 $file = "sites/default/files/pdf_using_mpdf/$sitename - $nid - $title.pdf";
+		 $htmlContent = '<h1></h1>
+		 <p></p>';
+		 mail_attachment($to, $subject,$file,$htmlContent);
+		 drupal_set_message('Mail has been Successfully sent');
+		 drupal_goto("$base_url/och-auditedreport");
+			
+		}
+	
+	
+}  
+
+
+
+
+
+
+
+
+function sendmailtriage($nid,$uid)
+{
+	 global $base_url;
+	 
+     $sitename = variable_get('site_name');
+	 $sitemail = variable_get('site_mail');
+	 
+	 
+	 $node = node_load($nid);
+	 $title = $node->title;	
+	 $userobj = user_load($uid);
+
+     $filepathname = "sites/default/files/pdf_using_mpdf/$sitename - $nid - $title.pdf";
+     $dir = "sites/default/files/pdf_using_mpdf";
+     $files = file_scan_directory($dir, '/.*\.pdf$/');
+	 $fcount = count($files[$filepathname]);
+	
+		if($fcount == 0)
+		{
+			drupal_set_message('Send report failed..Please pdf generate first then send report');
+			drupal_goto("$base_url/triage");
+			
+		}else{
+
+		 $to = $userobj->mail;
+		 $subject = 'Report for '.$title; 
+		 $file = "sites/default/files/pdf_using_mpdf/$sitename - $nid - $title.pdf";
+		 $htmlContent = '<h1></h1>
+		 <p></p>';
+		 mail_attachment($to, $subject,$file,$htmlContent);
+		 drupal_set_message('Mail has been Successfully sent');
+		 drupal_goto("$base_url/triage");
+		 
+		}
+	
+	
+	
+	
+	
+	/*
+		$filepathname1 = "$base_url/sites/default/files/pdf_using_mpdf/$sitename - $nid - $title.pdf";
+		$namefile1 = "$sitename - $nid - $title.pdf";	
+		$attachment = array(
+		  'filecontent' => $filepathname1,
+		  'filename' => $namefile1,
+		  'filemime' => 'application/pdf'
+		  );
+
+			 $to = $userobj->mail; // emails
+		
+			$from = $sitemail;
+
+			$params = array(
+			  'headers' => array('Content-Type' => 'text/html'),
+			  'key' => 'test',
+			  'subject' => 'Test email',
+			  'body' => 'test',
+			  'attachment' => $attachment
+			);
+
+			drupal_mail($module, $key, $to, $language, $params, $from, $send = TRUE);
+			
+			
+			drupal_goto("$base_url/triage");
+			
+		} */
+		
+		
+
+}
+
+
+function get_user_staff($sid)
+{
+	
+	
+	 $obj = db_query("SELECT users.picture AS users_picture, users.uid AS uid, users.name AS users_name, users.mail AS users_mail
+FROM 
+users users
+INNER JOIN users_roles users_roles ON users.uid = users_roles.uid
+LEFT JOIN og_membership og_membership ON users.uid = og_membership.etid AND og_membership.entity_type = 'user'
+WHERE (( (og_membership.gid = $sid ) )AND(( (users.status <> '0') AND (users_roles.rid = '9') )))");
+	
+	$record = $obj->fetchall();
+    echo json_encode($record);
+	
+}
+
+function get_rate_clinic($cid)
+{
+	
+		$rateobj = db_query("SELECT field_data_field_initial_assessment_.field_initial_assessment__value,field_data_field_treatment_sessions_ .field_treatment_sessions__value
+FROM field_data_field_initial_assessment_
+JOIN og_membership AS og ON og.gid = field_data_field_initial_assessment_.entity_id
+JOIN field_data_field_treatment_sessions_ ON og.gid = field_data_field_treatment_sessions_.entity_id
+WHERE og.etid =$cid");
+
+	$record = $rateobj->fetchall();
+	echo json_encode($record);	
+	
+	
+	
+}
+
+
+function assign_report($nid,$uid,$type)
+{
+	global $base_url;
+	
+	if($type == 2)
+	{
+		$node = node_load($nid);
+		$node->field_select_auditor['und'][0]['target_id'] = $uid;
+    
+	}else{
+	      	
+	    $node = node_load($nid);
+		$node->field_select_auditor_och['und'][0]['target_id'] = $uid;
+    	
+	}
+	
+	
+	
+	node_save($node);   
+	drupal_set_message("Auditor assign successfully..Report will display after auditor validated");
+	drupal_goto("$base_url/och-auditedreport");
+	
+}
+
+
+function subittednode($ndate,$stime,$etime,$nid,$type)
+{
+	
+	global $user;
+	global $base_url;
+      
+
+	//$ndate = date("d/m/Y", strtotime($ondate)); 
+	
+	$nodeobj = node_load($nid);
+	/*echo "<pre>";
+	print_r($nodeobj);
+	exit;*/
+	$title = $nodeobj->title;
+	$assign_staff = $nodeobj->field_assign_to_a_staff_pat['und'][0]['target_id'];
+	$clicnic = $nodeobj->field_assign_to_a_clinic['und'][0]['target_id'];
+	$inirate = $nodeobj->field_initial_assessment_rate_pa['und'][0]['value'];
+	$rate_per = $nodeobj->field_rate_per_treatment_pat['und'][0]['value'];
+
+		 $node = new stdClass();
+		 $node->title = "Session for ".$title;
+		 $node->type = "session";
+		 node_object_prepare($node); 
+		$node->language = LANGUAGE_NONE; 
+		$node->uid = $user->uid; 
+		$node->status = 1; 
+		$node->promote = 0; 
+		$node->comment = 0; 
+	    $node->field_session_app_date_1['und'][0]['value'] = $ndate.' '.$stime;
+		$node->field_session_app_date_1['und'][0]['value2'] = $ndate.' '.$etime;
+		
+		$node->field_session_ini_rate['und'][0]['value'] = $inirate;
+		$node->field_session_rate['und'][0]['value'] = $rate_per;
+		
+		
+		$node->field_session_request['und'][0]['target_id'] = $nodeobj->uid;
+		$node->field_session_patient['und'][0]['target_id'] = $nid;
+		$node->field_appointment_triage_staff['und'][0]['target_id'] = $assign_staff;
+		$node->field_session_establishment['und'][0]['target_id'] = $clicnic;
+		$node = node_submit($node);
+		node_save($node);
+		
+		$nodeobj->field_initial_assessment_pat['und'][0]['target_id'] = 28;
+		node_save($nodeobj);
+		
+        drupal_set_message('Patient successfully move to the Treatment section');
+		
+		if($type == 1)
+		{
+			drupal_goto("$base_url/new-refer");
+		}else{
+			drupal_goto("$base_url/new-refer-standard");
+		}		
+}
+
+
+function editsessionnode($inid,$apid,$nid,$type)
+{
+	
+	$nodeobj = node_load($nid);
+	/*echo "<pre>";
+	print_r($nodeobj);
+	exit;*/
+	
+	$nodeobj->field_session_app_des_1['und'][0]['target_id'] = $inid;
+	$nodeobj->field_session_app_status_1['und'][0]['target_id'] = $apid;
+	node_save($nodeobj); 
+    
+	drupal_set_message('Session successfully Updated');
+	
+	if($type == 2)
+	{
+		drupal_goto("$base_url/treatment-under-stand");
+	}else{
+		drupal_goto("$base_url/treatment-under");
+	}
+  	
+}
+
+function bookapp($ndate,$time,$appstatus,$nid)
+{
+	global $user;
+	global $base_url;
+	$nodeobj = node_load($nid);
+	$nodeobj->field_triage_booking_date_time_['und'][0]['value'] = $ndate.' '.$time;
+    $nodeobj->field_triage_booking_status['und'][0]['target_id'] = $appstatus;
+    $nodeobj->field_assign_triage_staff_pat['und'][0]['target_id'] = $user->uid;
+   	node_save($nodeobj);
+	
+	drupal_goto("$base_url/ap-nonconfirm");
+	
+	
+	
+}
+
+
+function outstand()
+{
+	$query = db_query("select field_data_field_session_patient.field_session_patient_target_id from field_data_field_session_patient
+JOIN field_data_field_service_psckages_physoth
+ON field_data_field_session_patient.field_session_patient_target_id = field_data_field_service_psckages_physoth.entity_id");
+	
+	$record = $query->fetchAll();
+	
+	print_r($record);
+	
+	
+	
+}
+
+
+function auditorval($nid,$valid,$type,$cpath)
+{
+	
+	
+	global $base_url;
+	
+	if($type == 2)
+	{
+		$node = node_load($nid);
+		$node->field_och_inirep_auditor_val['und'][0]['target_id'] = $valid;
+    
+	}else{
+	      	
+	    $node = node_load($nid);
+		$node->field_och_disrep_auditor_val['und'][0]['target_id'] = $valid;
+    	
+	}
+	
+	
+	
+	node_save($node);   
+	
+	drupal_goto("$base_url/$cpath");
+	
+	
+	
+	
+	
+}
+
+
+

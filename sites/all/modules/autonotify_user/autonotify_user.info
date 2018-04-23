@@ -1,0 +1,3 @@
+name = Auto Notify User when Admin add a new user to database.
+description = Prechecked notify user in user add form.
+core = 7.x

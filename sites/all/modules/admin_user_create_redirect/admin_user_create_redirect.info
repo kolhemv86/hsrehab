@@ -1,0 +1,3 @@
+name = Admin User Create redirect
+description = Redirect Admin to user page after user registration.
+core = 7.x

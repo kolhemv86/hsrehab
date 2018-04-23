@@ -1,0 +1,547 @@
+a{text-decoration:none !important;}
+.nav>li>a {
+    font-size: 20px;
+	color:#fff;
+}
+#block-system-user-menu li {
+    color: #fff;
+}
+header.navbar{
+	    background: #165ba8;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color:#fcb54d;
+}
+.dropdown-menu{
+	padding:0;
+}
+.navbar-btn {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cke_reset {
+	
+	height:auto !important;
+}
+
+.block-bootstrap-login-modal ul li a{
+	color:#fff;
+}
+
+#patient-sheet-node-form .form-control{
+	display:inherit;
+	width:inherit;
+	height:inherit;
+	padding:0px;
+}
+
+.date-form-element-content-multiline {
+	border:none !important;
+}
+
+.badge {
+	display:none;
+}
+
+
+
+.bodypart {
+	
+	width: 316px;
+	height: 353px;
+	background-color: #fff;	
+	position: relative;
+	
+	
+}
+
+
+
+.head {
+	width: auto;
+	display: table;
+	position: absolute;
+	left: 55px;
+}
+.chest {
+	display: table;
+	position: absolute;
+	left: 88px;
+	top: 47px;
+}
+.bicep-right {
+	display: table;
+	position: absolute;
+	left: 50px;
+	top: 70px;
+}
+.albow-right {
+	display: table;
+	position: absolute;
+	left: 0;
+	top: 69px;
+}
+.stumuch {
+	display: table;
+	position: absolute;
+	left: 100px;
+	top: 68px;
+}	
+.bicep-left {
+	display: table;
+	position: absolute;
+	right: 107px;
+	top: 21px;
+}
+.albow-left {
+	display: table;
+	position: absolute;
+	right: 9px;
+	top: 21px;
+}
+.hips {
+	display: table;
+	position: absolute;
+	right: 93px;
+	top: 139px;
+}
+.thigh_left {
+	display: table;
+	position: absolute;
+	left: 103px;
+	top: 167px;
+}
+.leg_left {
+	display: table;
+	position: absolute;
+	left: 93px;
+	bottom: 55px;
+}
+.ancel_left {
+	display: table;
+	position: absolute;
+	left: 122px;
+	bottom: 9px;
+}
+.thigh_right {
+	display: table;
+	position: absolute;
+	right: 75px;
+	bottom: 98px;
+}
+.leg_right {
+	display: table;
+	position: absolute;
+	right: 25px;
+	bottom: 46px;
+}
+.ancel_right {
+	display: table;
+	position: absolute;
+	right: 3px;
+	bottom: 6px;
+}
+/*-=-=-=-=-=-=-= feb 5 -=-=-=-=-=-=-*/
+.panel-default > .panel-heading {
+    color: #fff;
+    background-color: #165ba8;
+    border-color: #dddddd;
+}
+.form-group:last-child, .panel:last-child {
+    margin-bottom: 20px;
+}
+#patient-sheet-node-form .form-control {
+    display: inherit;
+    width: 100%;
+    height: inherit;
+    padding: 0px;
+}
+.page-node-edit .field-type-addressfield, .page-node-add .field-type-addressfield {
+    width: 100%;
+    margin-right: auto;
+}
+.form-group:last-child, .panel:last-child {
+    margin-bottom: 20px;
+}
+.date-no-float {
+    clear: both;
+    float: none;
+    width: 100%;
+}
+.date-form-element-content-multiline {
+    padding: 0;
+    border: 1px solid #CCC;
+}
+.container-inline-date > .form-item {
+    display: inline-block;
+    margin-right: 0;
+    vertical-align: top;
+}
+.container-inline-date .date-padding {
+    float: left;
+    width: 100%;
+}
+.dob_pat .form-group:last-child, .panel:last-child {
+    margin-bottom: 20px;
+    width: 100%;
+}
+.aa .form-item-field-date-for-contact-patient-und-0-value-time {
+    margin-left: 20px;
+}
+.aa{
+	/*margin-top:-27px;*/
+}
+.not-front.no-sidebars .main-container .row {
+    margin-bottom: 30px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    float: right;
+    margin-right: 0;
+}
+#block-system-main-menu li,
+  #block-menu-menu-administration-menu li,
+  #block-menu-menu-user-client-menu li,
+  #block-menu-menu-user-company-menu li,
+  #block-menu-menu-company-menu li,
+  #block-bootstrap-login-modal-bootstrap-login-modal li,
+  #block-menu-menu-netcomp-staff-menu li {
+    display: inline-block;
+    margin-right: 0;
+  }
+
+.input-group-addon {
+	padding:0px 18px;
+}
+
+
+
+
+/* -------------------------------------------*/
+
+
+.pheader{
+	margin: 0px;
+	padding-left: 0;
+	border-bottom:none;
+    
+}
+.breadcrumb {
+   
+    float: right;
+}
+
+.borderh{
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.nrow{
+max-width: 100% !important;
+}
+
+.not-front .block {
+    margin-bottom: 0px;
+}
+
+.box {
+    background: #e2e2e2;
+    width: 13%;
+    margin: 6px;
+    margin-bottom: 7px !important;
+    min-height: 290px;
+}
+
+.round-box {
+	margin-top: 0px;
+	margin-bottom: 25px;
+}
+
+.views-field a {
+	/*width: 100%;
+	 height: 20px; 
+	padding: 5px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: 500;*/
+}
+
+.dashboard-card .fieldset-legend {
+	font-size: 17px;
+	color: #000;
+	border-bottom: 1px solid #000;
+	padding-bottom: 5px;
+}
+
+.nrow ul li a{
+	color:#000;
+}
+.headtext {
+	margin-top:23px;
+	
+}
+
+.headtext a{
+	margin-right:12px;
+}
+
+.node-patient-sheet .field .field-label:after {
+    content: "";
+    display: table;
+    width: 100px;
+    height: 1px;
+    border-bottom: 1px solid #f4a535;
+    margin: 10px 0px;
+}
+
+.getid{
+	cursor:pointer;
+}
+
+#block-block-21 {
+	display:none;
+}
+
+#block-views-appointment-list-block-11{
+	display:none;
+}
+#block-block-10{
+	display:none;
+}
+
+#block-views-staff-calendar-block-2{
+	display:none;
+}
+
+#block-views-invoice-list-block-5{
+	display:none;
+}
+
+#block-views-reports-list-block-6{
+	display:none;
+}
+#block-block-14{
+	
+	display:none;
+}
+
+
+.round-box img{
+	width:132px;
+	height:131px;
+	
+	
+}
+
+/*#edit-field-patient-area-of-injury-und{
+	text-align:left !important;
+}
+#edit-field-patient-area-of-injury-und  .checkbox{
+	display:inline-block;
+	margin:7px;
+}
+*/
+
+
+#comments h3{
+	text-align: left;
+    border-bottom: 2px solid;
+    text-transform: capitalize;
+}
+#comments .user-picture {
+    max-width: 75px;
+    margin: 0 20px 20px 0;
+    float: left;
+}
+#comments .links li a{
+	background:#cb841f;
+	color:#fff;
+    padding: 8px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 10px 0px 0;
+    text-decoration: none;
+}
+
+
+
+
+.comment h3{
+	text-align: left;
+    border-bottom: 2px solid;
+    text-transform: capitalize;
+}
+.comment .user-picture {
+    max-width: 75px;
+    margin: 0 20px 20px 0;
+    float: left;
+}
+.comment .links li a{
+	background:#cb841f;
+	color:#fff;
+    padding: 8px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 10px 0px 0;
+    text-decoration: none;
+}
+
+
+
+.indented {
+	
+	margin-left:83px;
+	/*background:#cccccc;*/
+	padding:12px;
+}
+
+.form-item-field-date-for-contact-patient-und-0-value-year{
+	margin-right:23px;
+	
+}
+
+/*.pop {
+	
+	position: absolute;
+    left: 126px;
+    right: 0;
+    top: -43px;
+    right: 0;
+    background: #165ba8;
+    width: 33px;
+    border-radius: 53px;
+    height: 30px;
+    color: #fff;
+	
+	
+}*/
+
+
+#chat-btn {
+	width: 30px;
+	height: 30px;
+	background-color: #62cfc1;
+	border-radius: 20px;
+	position: absolute;
+	top: -11px;
+	right: -8px;
+	color: #fff;
+	padding-top: 2px;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+#chat-btn::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 12px;
+	bottom: -7px;
+	border-left: 10px solid transparent;
+	border-right: 2px solid transparent;
+	border-top: 10px solid #62CFC1;
+}
+
+
+.field-name-field-do-you-want-to-create-admi {
+	display:none;
+}
+
+button.close {
+	
+	background:#000;
+}
+.group-session-informations, .group-patient-information {
+	display:none;
+}
+
+.ctools-modal-dialog {
+	width:800px !important;
+}
+#modalContent {
+	top:-43px !important;
+}
+
+
+
+#block-block-11,
+#block-block-19 {
+    background: #e2e2e2;
+    width: 25%;
+    margin: 6px;
+    margin-bottom: 7px !important;
+    min-height: 290px;
+    margin-left: 12%;
+}
+#block-block-15 h2 {
+    text-align: left;
+    background: #555;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 22px;
+    color: #fff;
+	margin-bottom: 38px;
+}
+#block-block-24 {
+    margin-bottom: 30px;
+    background: #f1f1f1;
+    padding: 20px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+
+
+#block-block-22,
+#block-block-23 {
+	background: #e2e2e2;
+    width: 25%;
+    margin: 6px;
+    margin-bottom: 7px !important;
+    min-height: 290px;
+    margin-left: 12%;
+	margin-top:13px;
+	
+}
+
+ 
+.group-medical-informations .field-label{
+	float:left;
+	width: 50%
+}
+.group-medical-informations .field-items{
+	float:left;
+	width: 50%
+}
+.group-medical-informations .field-label-above{
+	width: 100%;
+	display:inline-block;
+}
+
+.footer {
+background: #001f42;
+    color: #fff;
+}
+.footer h4{
+	text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+footer li {
+    MARGIN-BOTTOM: 10px;
+}
+
+.clsDatePicker {
+    z-index: 100000;
+}
+
+#ui-datepicker-div{
+	display:none;
+	
+}

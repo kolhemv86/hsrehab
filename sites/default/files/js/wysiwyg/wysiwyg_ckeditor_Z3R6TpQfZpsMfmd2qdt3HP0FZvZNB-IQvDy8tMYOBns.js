@@ -1,0 +1,1 @@
+window.CKEDITOR_BASEPATH = '/hsrehab.co.uk/sites/all/libraries/ckeditor/';

@@ -1,0 +1,40 @@
+<?php
+function better_proximity_filter_element_info_alter(&$type) {
+  if (isset($type['geofield_proximity']['#process'])) {
+    $type['geofield_proximity']['#process'][] = 'better_proximity_filter_proximity_element_process';
+  }
+}
+
+/*
+* Alter geofield views exposed form, remove distance and unit
+*/
+function better_proximity_filter_proximity_element_process($element, &$form_state, $form) {
+//For example, we have a view with machine_name 'shiny rocks' and the panel pane name is 'panel_pane_1'
+//You can find the values with dpr($form_state['view']->name) and dpr($form_state['view']->current_display)
+
+	if ($form_state['view']->name == 'clinic_locator_tool' && $form_state['view']->current_display == 'block') {
+
+		$element['distance']['#type'] = 'select'; //replace textfield with select
+
+//Provide options drop-down to users
+	    $element['distance']['#options'] = array(
+				  5 => t('5 Miles'),
+				  10 => t('10 Miles'),
+				  20 => t('20 Miles'),
+				  50 => t('50 Miles'),
+				  100 => t('100 Miles'),
+				);
+     $element['distance']['#default_value'] = 5; //set default to 20 Miles
+
+//Find geofield unit constants in geofield.elements.inc (we use km here)
+		$element['unit']['#default_value'] = GEOFIELD_MILES;
+
+//Hide unit dropdown from modification
+		$element['unit']['#access'] = FALSE;
+
+//BTW, we will not override validation in this example to prevent HTML hacking (which allows any number, say 999999999), making website scraping still very easy
+
+		return $element;
+	}
+ return $element;
+}
