@@ -545,3 +545,37 @@ footer li {
 	display:none;
 	
 }
+
+.field-name-field-patient-descrip-injury .field-label {
+	
+	width:20%;
+}
+
+.field-name-field-patient-area-of-injury .field-label {
+	width:25%;
+	
+}
+
+.field-name-field-patient-status .field-label {
+	
+	width:25%;
+}
+
+.field-name-field-date-of-injury .field-label {
+	
+	width:25%;
+}
+
+.field-name-field-nature-of-injury .field-label {
+	
+	width:25%;
+}
+
+.field-group-company-identification h2{
+	
+	display:none;
+}
+
+#block-menu-menu-our-services .nav li a{
+	color:#2780e3;
+}
